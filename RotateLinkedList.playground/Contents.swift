@@ -104,3 +104,50 @@ func rotateLinkedList(ll: LinkedList<Int>, k: Int){
 }
 
 rotateLinkedList(ll: ll, k: 9)
+
+
+/*
+
+ Given a singly-linked list, find the middle value in the list.
+ Example: If the given linked list is A → B → C → D → E, return C.
+ Assumptions: The length (n) is odd so the linked list has a definite middle.
+
+ 
+ */
+
+
+let llTwo = LinkedList<Int>()
+
+llTwo.append(value: 1)
+llTwo.append(value: 2)
+llTwo.append(value: 3)
+llTwo.append(value: 4)
+llTwo.append(value: 5)
+llTwo.append(value: 6)
+llTwo.append(value: 7)
+llTwo.append(value: 8)
+llTwo.append(value: 9)
+llTwo.append(value: 10)
+llTwo.append(value: 11)
+llTwo.append(value: 12)
+llTwo.append(value: 13)
+llTwo.append(value: 14)
+llTwo.append(value: 15)
+llTwo.append(value: 16)
+llTwo.append(value: 17)
+
+
+
+func findMiddleElementOfLL(ll: LinkedList<Int>){
+    var pointerOne = ll.head
+    var PointerTwo = ll.head
+    
+    while PointerTwo != nil && PointerTwo?.next != nil {
+        pointerOne = pointerOne?.next
+        PointerTwo = PointerTwo?.next!.next
+    }
+    
+    print(pointerOne?.value)
+}
+
+findMiddleElementOfLL(ll: llTwo)
