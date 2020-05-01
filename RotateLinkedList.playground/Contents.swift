@@ -2,6 +2,34 @@ import UIKit
 
 /*
  Rotate a given linked list counter-clockwise by k nodes, where k is a given integer.
+ 
+ What clarifying questions would you ask?
+ 
+ what do i return if the linked list is emty?
+ what do i return the same linked list or do i make a copy
+ will the linked list always be valid?
+
+ What reasonable assumptions could you state?
+ ill assume that the linked list is singly linked
+
+ What are 2-3 ways you can simplify the problem?
+ create a node the indiviaul nodes were're working with
+ make a class for the nodes making it easier to work with
+
+ Brainstorm 2-3 ways to approach the problem.
+ iterte through the nodes and re assign the values
+ ????
+ 
+ Choose one idea and write pseudocode for it.
+check if the LL is empty if so return because we cant rotate an empty list
+for loop for how ever many times we want to loop
+ create a copy of the heads value
+ create a tempNode
+ while your tempNode.next is not nil
+    tempNode.value becomes tempNode.next.value
+    tempNode = tempNode.next
+when we're done we make tempNode.value = copy of head value we made at the start
+ 
  */
 
 class Node<T>{
